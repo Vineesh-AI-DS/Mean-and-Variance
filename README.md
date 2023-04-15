@@ -49,35 +49,47 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 ```py
+Developed By : Baggu Dhivya Shri
+Register  No : 212221230009
+
 import numpy as np
-L=[int (i) for i in input () .split ()]
-N=1en (L) ; M=max (L)
-x=list ();f=list ()
-for i in range (M+1) :
-C= Q
-for j in range (N) :
-if L[j]=-i:
-c=c+1
-f.append(c)
-x .append (i)
-sf=np. sum(f)
+L=[int(i) for i in input().split()]
+
+#Construction of frequency table
+x=list();f=list()
+N=len(L);M=max(L)
+for i in range (M+1):
+    c=0
+    for j in range(N):
+        if L[j]==i:
+            c=c+1
+    f.append(c) #adding elements to list f
+    x.append(i) #adding elements to list x
+
+sf=np.sum(f) #sum of frequency - sf
+# calculating probability distribution
 p=list()
-for i in range (M+1) :
-p-append(f[il/sf)
-mean=p-inner(x,p)
-EX2=np-inner (np. square (x), P)
-var=EX2-mean**2
+for i in range(M+1):
+    p.append(f[i]/sf) # calculating probability distribution
+#calculate mean
+mean=np.inner(x,p) # multiplying corresponding element - inner function
+EX2=np.inner(np.square(x),p) #to find variance = ex^2 - (ex)^2
+# variance
+var=EX2-mean**2 
+# standard deviation
 SD=np.sqrt(var)
-print("The Hean arrival rate is %.3f "%mean)
-print ("The Variance of arrival from feeder is %.3f
-"%var)
-print ("The Standard deviation of arrival from feeder is %.3F
-"%SD)
+
+print("The Mean arrival rate is %.3f"%mean)
+
+print("The Variance of arrival from feeder is %.3f"%var)
+
+print("The Standard deviation of arrival from feeder is %.3f"%SD)
 ```
 
 
 # Output : 
-![prob1](https://user-images.githubusercontent.com/93427254/232221461-db65ac72-a7c0-4f74-ba8c-6d4efb99d706.png)
+
+![pro1](https://user-images.githubusercontent.com/93427254/232222554-75b9303c-1d73-4c14-b08c-7f6f5882445d.png)
 
 
 # Result :
