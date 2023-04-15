@@ -48,7 +48,32 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
-
+```py
+import numpy as np
+L=[int (i) for i in input () .split ()]
+N=1en (L) ; M=max (L)
+x=list ();f=list ()
+for i in range (M+1) :
+C= Q
+for j in range (N) :
+if L[j]=-i:
+c=c+1
+f.append(c)
+x .append (i)
+sf=np. sum(f)
+p=list()
+for i in range (M+1) :
+p-append(f[il/sf)
+mean=p-inner(x,p)
+EX2=np-inner (np. square (x), P)
+var=EX2-mean**2
+SD=np.sqrt(var)
+print("The Hean arrival rate is %.3f "%mean)
+print ("The Variance of arrival from feeder is %.3f
+"%var)
+print ("The Standard deviation of arrival from feeder is %.3F
+"%SD)
+```
 
 
 # Output : 
